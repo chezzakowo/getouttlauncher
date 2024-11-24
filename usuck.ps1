@@ -7,7 +7,7 @@ if (Test-Path $ModsFolder) {
 }
 
 # Recreate the Mods folder
-New-Item -Path "C:\Users\Dell\AppData\Roaming\.minecraft" -Name "Mods" -ItemType "directory" -Force
+New-Item -Path "C:\Users\Dell\AppData\Roaming\.minecraft" -Name "mods" -ItemType "directory" -Force
 
 # Get the ACL for the newly created folder
 $Acl = Get-Acl $ModsFolder
@@ -27,4 +27,4 @@ $Acl.SetAccessRule($Ar)
 # Apply the updated ACL to the Mods folder
 Set-Acl $ModsFolder $Acl
 
-Write-Host "Mods folder recreated and access permissions updated successfully."
+Write-Host "Đã cho mod TLCape ra chuồng gà."
